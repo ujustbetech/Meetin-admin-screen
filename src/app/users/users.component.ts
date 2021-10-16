@@ -21,8 +21,9 @@ export class UsersComponent implements OnInit,AfterViewInit,OnDestroy {
    constructor(private http:HttpClient) {}
 
   
+  //  fetch api data in datatable
     ngOnInit():void{
-      this.http.get("https://api-test.ujustbe.com/Meeting/getallmeetings")
+      this.http.get("https://api.ujustbe.com/Meeting/getallmeetings")
       .subscribe(data=>{
        console.log(data);
        this.data=data;
@@ -41,7 +42,6 @@ export class UsersComponent implements OnInit,AfterViewInit,OnDestroy {
        });
     
     }
-    
     
     ngAfterViewInit(): void {
      
